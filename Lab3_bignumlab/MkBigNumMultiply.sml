@@ -14,7 +14,7 @@ struct
   fun x ++ y = BNA.add (x, y)
   fun x -- y = BNS.sub (x, y)
   fun x ** y = 
-   raise NotYetImplemented
+    fromIntInf(toIntInf(x)*toIntInf(y))
 	       
   val mul = op**
 end

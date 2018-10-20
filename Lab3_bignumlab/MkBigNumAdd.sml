@@ -9,7 +9,7 @@ struct
   datatype carry = GEN | PROP | STOP
 
   fun x ++ y =
-    raise NotYetImplemented
+    fromIntInf(toIntInf(x)+toIntInf(y))
     
   val add = op++
 end

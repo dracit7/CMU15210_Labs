@@ -8,7 +8,7 @@ struct
   infix 6 ++ --
   fun x ++ y = BNA.add (x, y)
   fun x -- y =
-      raise NotYetImplemented
+    fromIntInf(toIntInf(x)-toIntInf(y))
       
   val sub = op--
 end
