@@ -1,0 +1,27 @@
+This assignment is meant to help you familiarize yourself with the syntax of Standard ML as well as
+ the testing facilities used throughout all the lab assignments. You will implement a function
+ officiating a card game as described in the pdf file. After downloading and decompressing the 
+ assignment archive, you should see these files or folders:
+
+ 1. sources.cm
+ 2. support.cm
+ 3. lib/
+ 4. CardType.sml
+ 5. CarElt.sml
+ 6. MoveElt.sml
+ 7. ReferenceCard.sml
+ 8. tester.sml
+ 9. README file
+10. Assignment.pdf
+11. Tests.sml *
+12. CardProblem.sml *
+
+You should only modify the last 2 files, denoted by *. Provide a solution to the problem, and replace the dummy 
+implementation of officiate in CardProblem.sml. Do NOT modify other parts of the file.
+
+To aid with testing we have provided a testing structure, Tester, which should simplify the testing process. 
+Tester will test your implementations against test cases speciﬁed within Tests.sml.
+Test cases should be added to the tests list in the Tests structure. To compile and load everything into the SML/NJ REPL,
+run 'CM.make "sources.cm"' within the REPL.In order to test your code, after running CM.make, 
+you will need to call the following function:
+Tester.testCard ()

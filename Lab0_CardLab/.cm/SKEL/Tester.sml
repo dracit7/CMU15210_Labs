@@ -1,0 +1,2 @@
+Skeleton 5
+aä¢Tester"h4egp1d"StudentTestSuite"f8d"CardProblem"ÿä¢ArraySequence"Cd"Tests"d"ReferenceCard"d"Checker"ä¢IntElt"d"Logger"Naä¢InElt"jh3ad"EltA"jh1aä¢Elt"gp1d"CardElt"çğ±å¢MkListElt"ad"EltB"jh1aÿ‚gp1d"MoveElt"ÿ‚&ad"EltC"gp1ÿ(gp1e"MkTripleElt"ad"InSeqElt"jh2aÿ‚gp1ÿ<ad"Seq"gp1ÿ5gp1e"MkSeqElt"
