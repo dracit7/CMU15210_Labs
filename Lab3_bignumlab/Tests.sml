@@ -2,6 +2,7 @@ structure Tests =
 struct
   val testsAdd : (IntInf.int * IntInf.int) list = [
     (4000,3334),
+    (1,1),
     (3,2),
     (123, 937),
     (1024,1024),
@@ -18,7 +19,8 @@ struct
     (1024,1),
     (884,121),
     (65536,1024),
-    (65535,1023)
+    (65535,1023),
+    (12039820349,234098)
   ]
 
   val testsMul : (IntInf.int * IntInf.int) list = [
