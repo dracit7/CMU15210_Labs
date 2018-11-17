@@ -7,6 +7,8 @@ struct
   open Option210
 
   fun parenDist (parens : paren seq) : int option =
+  (* Complexity of this algorithm: W(n)=2W(n/2)+Wshowt(n)+O(1) *)
+
     (* Use a tuple with size 5 to pass all possible information: 
      * maxDist: present max distance
      * leftCloses: number of unmatched Cparens
@@ -37,6 +39,7 @@ struct
       else Result
     end
     
+    (* The former version, which holds the complexity W(n)=2W(n/2)+Wshowt(n)+O(n) *)
     (* let
       fun Solution parens =
         case showt parens of
