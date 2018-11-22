@@ -3,15 +3,15 @@ struct
   open Table
   open Seq
 
-  (* Table.key defines our vertex type *)
   type vertex = key
+  (* Table.key defines our vertex type *)
   type edge = vertex * vertex
 
   exception NYI
   (* You must define the following two types and
    * explain your decision here with comments.
    *)
-  type graph = unit
+  type graph = (vertex * vertex seq) seq
   type asp = unit
 
   (* Task 2.1 *)

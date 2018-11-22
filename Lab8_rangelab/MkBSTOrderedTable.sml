@@ -8,8 +8,8 @@ struct
   (* Include all the functionalities of the standard Table *)
   open Table
 
-  (* This is defined after "open" so it doesn't get overwritten *)
   structure Key = Tree.Key
+  (* This is defined after "open" so it doesn't get overwritten *)
   type key = Key.t
 
   (* Remember, type 'a table = 'a Tree.bst *)
@@ -18,7 +18,7 @@ struct
   exception NYI
 
   fun first (T : 'a table) : (key * 'a) option =
-    raise NYI   
+    raise NYI
 
   fun last (T : 'a table) : (key * 'a) option =
     raise NYI

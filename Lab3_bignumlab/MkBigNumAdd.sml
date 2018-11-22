@@ -59,7 +59,9 @@ struct
       (* Generate the CarryMask *)
       val Result = map2 GenBits RawCarrys CarryMask
     in
-      Result
+      if nth Result (length Result-1) = ZERO andalso nth Result 0 <> ZERO then 
+        take(Result,length Result-2)
+      else Result
     end
 
     (* let
