@@ -12,15 +12,18 @@ struct
   val compareKey : (Key.t * Key.t) -> order = Key.compare
 
   (* Define this yourself *)
-  type countTable = unit
-
-  (* Remove this line before submitting! *)
-  exception NYI
+  type countTable = unit table table
 
   fun makeCountTable (S : point seq) : countTable =
-    raise NYI
+    OrdTable.map OrdTable.fromSeq (OrdTable.map (Seq.map (fn x=>(x,()))) (OrdTable.collect S))
 
   fun count (T : countTable)
                    ((xLeft, yHi) : point, (xRght, yLo) : point) : int  =
-   raise NYI
+    let
+      fun getRangeY (T : unit table) =
+        getRange T (yLo,yHi)
+      val trimmedTable = OrdTable.map getRangeY (OrdTable.getRange T (xLeft,xRght))
+    in
+      OrdTable.reduce op+ 0 (OrdTable.map OrdTable.size trimmedTable)
+    end
 end

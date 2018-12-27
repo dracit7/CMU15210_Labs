@@ -14,29 +14,34 @@ struct
 
   (* Remember, type 'a table = 'a Tree.bst *)
 
-  (* Remove this line before submitting! *)
-  exception NYI
-
   fun first (T : 'a table) : (key * 'a) option =
-    raise NYI
+    case Tree.expose T of NONE => NONE
+    | SOME {key, value, left, right} =>
+      case Tree.expose left of NONE => SOME(key,value)
+        | _ => first left
 
   fun last (T : 'a table) : (key * 'a) option =
-    raise NYI
+    case Tree.expose T of NONE => NONE
+    | SOME {key, value, left, right} =>
+      case Tree.expose right of NONE => SOME(key,value)
+        | _ => last right
 		      
   fun previous (T : 'a table) (k : key) : (key * 'a) option =
-    raise NYI
+    case Tree.splitAt(T,k) of (l,_,_) => last l
 
   fun next (T : 'a table) (k : key) : (key * 'a) option =
-    raise NYI
+    case Tree.splitAt(T,k) of (_,_,r) => first r
 
   fun join (L : 'a table, R : 'a table) : 'a table =
-    raise NYI
+    Tree.join(L,R)
 
   fun split (T : 'a table, k : key) : 'a table * 'a option * 'a table =
-    raise NYI
+    Tree.splitAt(T,k)
 
   fun getRange (T : 'a table) (low : key, high : key) : 'a table =
-    raise NYI
+    Table.filterk (fn (k,v) => if Key.compare(k,low) = LESS then false
+                            else if Key.compare(k,high) = GREATER then false
+                            else true) T
 						       
 
 end

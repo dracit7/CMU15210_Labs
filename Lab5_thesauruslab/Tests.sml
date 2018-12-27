@@ -31,6 +31,15 @@ struct
      (testfile, "GOOD")]
 
   val testsQuery =
-    [(testfile2, ("HANDSOME", "YOLO")),(testfile2,("BADASS","STUPID")),(testfile2,("PRETTY","CHRIS")),(testfile, ("GOOD", "BAD")),(testfile, ("CLEAR", "VAGUE")),(testfile, ("LOGICAL", "ILLOGICAL")),(testfile,("HAPPY","SAD")),(testfile,("LIBERAL","CONSERVATION")),(testfile, ("EARTHLY", "POISON"))]
+    [(testfile2, ("HANDSOME", "YOLO")),
+    (testfile2,("BADASS","STUPID")),
+    (testfile2,("PRETTY","CHRIS")),
+    (testfile, ("GOOD", "BAD")),
+    (testfile, ("CLEAR", "VAGUE")),
+    (testfile, ("LOGICAL", "ILLOGICAL")),
+    (testfile,("HAPPY","SAD")),
+    (testfile,("LIBERAL","CONSERVATION")),
+    (testfile, ("EARTHLY", "POISON")),
+    (testfile2, ("ALONE", "APART"))]
 
 end
