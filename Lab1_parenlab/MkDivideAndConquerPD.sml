@@ -11,8 +11,8 @@ struct
 
     (* Use a tuple with size 5 to pass all possible information: 
      * maxDist: present max distance
-     * leftCloses: number of unmatched Cparens
-     * rightCloses: number of unmatched Oparens
+     * Closes: number of unmatched Cparens
+     * Opens: number of unmatched Oparens
      * leftLen: the distance between the rightmost unmatched Cparen and the left edge
      * rightLen: the distance between the leftmost unmatched Oparen and the right edge
      *)
